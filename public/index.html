@@ -1,0 +1,50 @@
+<h1>Lista de usuários</h1>
+
+<style>
+	div {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		box-shadow: 1px 1px 5px grey;
+		padding: 10px;
+	}
+</style>
+
+<section>
+	<div>
+		<span>Nome: <strong>Henning</strong> </span>
+		<span>Senha: <strong>123456</strong> </span>
+	</div>
+</section>
+
+<script>
+	let URL =
+		"https://e3f39421-7eb4-40e8-8da2-e15f5fa29377-00-3iddw78gvr08e.riker.repl.co:3000/users";
+	fetch(URL)
+		.then((res) => {
+			return res.json();
+		})
+		.then((users) => {
+			console.log(users);
+			document.querySelector("section").innerHTML = montarDados(users)
+		});
+
+	function montarDados(users){
+		let dados = "";
+		for(let i = 0; i < users.length; i++){
+			dados += `<div>
+						<span>Nome: <strong>${users[i].username}</strong> </span>
+						<span>Senha: <strong>${users[i].password}</strong> </span>
+						<button onclick="deletar()">Deletar</button>
+					</div><br>`
+		}
+		return dados;
+	}
+
+	function deletar(){
+		console.log("Deletado com sucesso");
+	}
+</script>

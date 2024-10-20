@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "username": "BARLY SUMMER",
+      "password": "123456",
+      "id": 2,
+      "email": "summer@summmer.com"
+    },
+    {
+      "username": "melo",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "username": "melo",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "username": "melo",
+      "password": "123456",
+      "id": 5
+    }
+  ],
+  "pets": [
+    {
+      "name": "Bob",
+      "race": "vira-lata",
+      "id": 1
+    }
+  ],
+  "tutors": [
+    {
+      "name": "Amaro",
+      "pet": "Bob",
+      "id": 1
+    }
+  ]
+}
